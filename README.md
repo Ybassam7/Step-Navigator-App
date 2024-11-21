@@ -2,6 +2,8 @@
 
 A React-based project demonstrating step navigation with dynamic state management, conditional rendering, and responsive design. The app uses `useState` to manage step progression, toggles visibility with SVG icons, and adapts to different screen sizes. It is designed for scalability, modularity, and a clean user interface.
 
+check it out live at : https://step-navigator-app.vercel.app/
+
 ## Features & Best Practices
 
 - **State Management**:  
