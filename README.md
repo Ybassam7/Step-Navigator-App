@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# React Step Navigation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based project demonstrating step navigation with dynamic state management, conditional rendering, and responsive design. The app uses `useState` to manage step progression, toggles visibility with SVG icons, and adapts to different screen sizes. It is designed for scalability, modularity, and a clean user interface.
 
-## Available Scripts
+## Features & Best Practices
 
-In the project directory, you can run:
+- **State Management**:  
+  Uses `useState` to independently manage `step` and `isOpen` states, demonstrating React's state-handling capabilities.
 
-### `npm start`
+- **Step Navigation**:  
+  "Next" and "Previous" buttons to move through steps, each displaying a corresponding message from the `messages` array. Active steps are visually highlighted using CSS class manipulation (e.g., `className={step >= 1 ? "active" : ""}`).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Visibility Toggle**:  
+  A toggle button to show or hide the step navigation UI. SVG icons (up/down arrows) are dynamically rendered based on the `isOpen` state, demonstrating conditional rendering.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Responsive Design**:  
+  Ensures usability across different screen sizes, adjusting layout for mobile and desktop views. The container remains centered and adapts smoothly without layout shifts.
 
-### `npm test`
+- **Modular & Scalable Code**:  
+  The `messages` array simplifies adding or modifying steps, keeping the code clean and maintainable. SVG imports (ArrowDownIcon, ArrowUpIcon) enhance reusability.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Code Readability**:  
+  Clear function names like `handleNext` and `handlePrevious` improve code clarity. Inline styles and external CSS (`App.css`) are used for flexible and consistent styling across components.
 
-### `npm run build`
+## How It Works
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Step Navigation**:  
+  Use the "Next" and "Previous" buttons to navigate between steps. Each step displays a corresponding message from the `messages` array.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Visibility Toggle**:  
+  Clicking the toggle button shows or hides the navigation UI. Icons dynamically switch between "down arrow" (to hide) and "up arrow" (to show).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Active Step Highlighting**:  
+  The current and completed steps are visually highlighted using a CSS class (`active`).
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React (Functional components, hooks)
+- CSS (Responsive design)
+- SVG (Dynamic icons)
