@@ -8,16 +8,19 @@ body {
 }
 
 .steps {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   background-color: #f7f7f7;
   border-radius: 7px;
-  padding: 25px 100px;
+  padding: 25px 30px;
   margin: 100px auto;
+  position: relative; /* To ensure the close button stays in place */
 }
 
 .numbers {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .numbers > div {
@@ -50,6 +53,7 @@ body {
 .buttons {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .buttons button {
@@ -84,8 +88,72 @@ h3 {
   cursor: pointer;
   font-size: 40px;
   color: inherit;
+  z-index: 10; /* Ensure it stays above other content */
 }
 
 .close:hover {
   fill: #0e6eb8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .steps {
+    padding: 20px;
+    margin: 50px 10px;
+  }
+
+  .numbers > div {
+    font-size: 16px;
+    height: 35px;
+  }
+
+  .message {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  .buttons button {
+    font-size: 16px;
+    padding: 12px;
+    width: 45%; /* Keep buttons aligned on left and right */
+  }
+
+  .close {
+    font-size: 30px;
+    top: 12px; /* Slightly reduce the space from the top */
+    right: 12px; /* Slightly reduce the space from the right */
+  }
+}
+
+@media (max-width: 480px) {
+  .steps {
+    padding: 15px;
+    margin: 30px 5px;
+  }
+
+  .numbers > div {
+    font-size: 14px;
+    height: 30px;
+  }
+
+  .message {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .buttons button {
+    font-size: 14px;
+    padding: 10px;
+    width: 45%; /* Keep buttons aligned on left and right */
+  }
+
+  .close {
+    font-size: 28px;
+    top: 8px; /* Further adjust for smaller screens */
+    right: 8px; /* Further adjust for smaller screens */
+  }
 }
